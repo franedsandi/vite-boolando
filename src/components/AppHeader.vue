@@ -1,6 +1,37 @@
 <script>
 export default {
-
+  data(){
+    return{
+      mainMenu:[
+        {
+          href: '#',
+          text: 'Donna'
+        },
+        {
+          href: '#',
+          text: 'Uomo'
+        },
+        {
+          href: '#',
+          text: 'Bambini'
+        }
+      ],
+      secondMenu:[
+        {
+          href: '#',
+          text: '<i class="fa-regular fa-user"></i>'
+        },
+        {
+          href: '#',
+          text: '<i class="fa-regular fa-heart"></i>'
+        },
+        {
+          href: '#',
+          text: '<i class="fa-solid fa-bag-shopping"></i>'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -8,18 +39,26 @@ export default {
 <div class="header">
   <div class="container">
     <ul>
-      <li><a href="#">Donna</a></li>
-      <li><a href="#">Uomo</a></li>
-      <li><a href="#">Bambini</a></li>
+      <li 
+      v-for="(item,index) in mainMenu"
+      :key="index">
+        <a 
+        :href="item.href">
+        {{item.text}}</a>
+      </li>
     </ul>
     <div class="logo">
       <img src="../assets/img/boolean-logo.png" alt="">
     </div>
     <div class="fontawesome">
       <ul>
-        <li><a href=""><i class="fa-regular fa-user"></i></a></li>
-        <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
-        <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+        <li 
+          v-for="(item, index) in secondMenu"
+          :key="index">
+            <a 
+            :href="item.href" 
+            v-html="item.text"></a>
+        </li>
       </ul>
     </div>
   </div>
