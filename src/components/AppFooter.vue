@@ -1,6 +1,45 @@
 <script>
 export default {
-
+  data(){
+    return{
+      legal:[
+        {
+          href: '#',
+          text: 'Informazioni legali'
+        },
+        {
+          href: '#',
+          text: 'Informativa sulla Privacy'
+        },
+        {
+          href: '#',
+          text: 'Dirito di recesso'
+        }
+      ],
+      social:[
+        {
+          href: '#',
+          icon: '<i class="fa-brands fa-square-twitter"></i>'
+        },
+        {
+          href: '#',
+          icon: '<i class="fa-brands fa-square-facebook"></i>'
+        },
+        {
+          href: '#',
+          icon: '<i class="fa-brands fa-square-instagram"></i></i>'
+        },
+        {
+          href: '#',
+          icon: '<i class="fa-brands fa-pinterest"></i>'
+        },
+        {
+          href: '#',
+          icon: '<i class="fa-brands fa-youtube"></i>'
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -12,9 +51,13 @@ export default {
           Boleando S.R.L.
         </span>
         <ul class="d-flex f-wrap s-between">
-          <li><a href="#">Informazioni legali</a></li>
-          <li><a href="#">Informativa sulla Privacy</a></li>
-          <li><a href="#">Dirito di recesso</a></li>
+          <li 
+          v-for="(item,index) in legal"
+          :key="index">
+            <a 
+            :href="item.href">
+            {{item.text}}</a>
+          </li>
         </ul>
       </div>
       <div class="social">
@@ -22,11 +65,13 @@ export default {
           Trovaci anche su
         </span>
         <ul class="d-flex f-wrap s-between">
-          <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li 
+          v-for="(item, index) in social"
+          :key="index">
+            <a 
+            :href="item.href" 
+            v-html="item.icon"></a>
+        </li>
         </ul>
       </div>
     </div>

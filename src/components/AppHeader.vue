@@ -19,15 +19,15 @@ export default {
       secondMenu:[
         {
           href: '#',
-          text: '<i class="fa-regular fa-user"></i>'
+          icon: '<i class="fa-regular fa-user"></i>'
         },
         {
           href: '#',
-          text: '<i class="fa-regular fa-heart"></i>'
+          icon: '<i class="fa-regular fa-heart"></i>'
         },
         {
           href: '#',
-          text: '<i class="fa-solid fa-bag-shopping"></i>'
+          icon: '<i class="fa-solid fa-bag-shopping"></i>'
         }
       ]
     }
@@ -57,7 +57,7 @@ export default {
           :key="index">
             <a 
             :href="item.href" 
-            v-html="item.text"></a>
+            v-html="item.icon"></a>
         </li>
       </ul>
     </div>
