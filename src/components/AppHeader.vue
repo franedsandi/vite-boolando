@@ -1,36 +1,13 @@
 <script>
+import mainMenu from '../data/mainMenu';
+import secondMenu from '../data/secondMenu';
+
 export default {
-  data(){
-    return{
-      mainMenu:[
-        {
-          href: '#',
-          text: 'Donna'
-        },
-        {
-          href: '#',
-          text: 'Uomo'
-        },
-        {
-          href: '#',
-          text: 'Bambini'
-        }
-      ],
-      secondMenu:[
-        {
-          href: '#',
-          icon: '<i class="fa-regular fa-user"></i>'
-        },
-        {
-          href: '#',
-          icon: '<i class="fa-regular fa-heart"></i>'
-        },
-        {
-          href: '#',
-          icon: '<i class="fa-solid fa-bag-shopping"></i>'
-        }
-      ]
-    }
+  data() {
+    return {
+      mainMenu,
+      secondMenu
+    };
   }
 }
 </script>

@@ -1,43 +1,11 @@
 <script>
+import social from '../data/social';
+import legal from '../data/legal';
 export default {
   data(){
     return{
-      legal:[
-        {
-          href: '#',
-          text: 'Informazioni legali'
-        },
-        {
-          href: '#',
-          text: 'Informativa sulla Privacy'
-        },
-        {
-          href: '#',
-          text: 'Dirito di recesso'
-        }
-      ],
-      social:[
-        {
-          href: '#',
-          icon: '<i class="fa-brands fa-square-twitter"></i>'
-        },
-        {
-          href: '#',
-          icon: '<i class="fa-brands fa-square-facebook"></i>'
-        },
-        {
-          href: '#',
-          icon: '<i class="fa-brands fa-square-instagram"></i></i>'
-        },
-        {
-          href: '#',
-          icon: '<i class="fa-brands fa-pinterest"></i>'
-        },
-        {
-          href: '#',
-          icon: '<i class="fa-brands fa-youtube"></i>'
-        },
-      ]
+      legal,
+      social,
     }
   }
 }
