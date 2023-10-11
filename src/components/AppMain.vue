@@ -1,7 +1,11 @@
 <script>
 import Menus from '../data/Menus';
+import Card from './Card.vue'; 
 
 export default {
+  components: {
+    Card, 
+  },
   data() {
     return {
       cards: Menus.cards,
@@ -14,27 +18,18 @@ export default {
   <div class="mid">
     <div class="container">
       <div class="content">
-        <div v-for="(item, index) in cards" :key="index" class="card">
-          <div class="image">
-            <img :src="item.primaryImage" alt="articulo">
-            <img :src="item.secondaryImage" alt="articulo b" class="upper p-absolute">
-            <div class="like p-absolute">
-              <span class="heart" >&hearts;</span>
-            </div>
-            <div class="caracteristicas p-absolute">
-              <span v-if="item.discount !== null" class="sconto">{{ item.discount }}</span>
-              <span class="sostenibile" v-if="item.sostenibilita">Sostenibilità</span>
-            </div>
-          </div>
-            <div class="description">
-              <span class="tag brand">{{ item.marca }}</span>
-              <span class="tag name">{{ item.modello }}</span>
-              <span class="tag price">
-              <span v-if="item.lastPrice !== null" class="red">{{ item.lastPrice }} &euro;</span>
-              <span class="fullprice">{{item.fullPrice}}&euro;</span>
-            </span>
-          </div>
-        </div>
+        <Card
+          v-for="(item, index) in cards"
+          :key="index"
+          :primaryImage="item.primaryImage"
+          :secondaryImage="item.secondaryImage"
+          :discount="item.discount"
+          :sostenibilita="item.sostenibilita"
+          :marca="item.marca"
+          :modello="item.modello"
+          :lastPrice="item.lastPrice"
+          :fullPrice="item.fullPrice"
+        />
       </div>
     </div>
   </div>
@@ -42,5 +37,4 @@ export default {
 
 <style lang="scss" scoped>
 @use '../scss/partials/mid.scss';
-
 </style>
