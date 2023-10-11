@@ -6,6 +6,9 @@
     display: flex;
     justify-content: space-between;
     padding: 0px;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
     a{
       color: white;
       text-decoration: none;
@@ -25,7 +28,7 @@
       }
     }
     .logo{
-      width: 150px;
+      width: 165px;
       align-self: center;
       img{
         width: 100%

@@ -13,12 +13,12 @@ export default {
 
 <template>
   <div class="footer">
-    <div class="container d-flex f-wrap s-between">
+    <div class="container">
       <div class="legal">
         <span class="compani">
           Boleando S.R.L.
         </span>
-        <ul class="d-flex f-wrap s-between">
+        <ul>
           <li 
           v-for="(item,index) in legal"
           :key="index">
@@ -32,7 +32,7 @@ export default {
         <span>
           Trovaci anche su
         </span>
-        <ul class="d-flex f-wrap s-between">
+        <ul>
           <li 
           v-for="(item, index) in social"
           :key="index">
