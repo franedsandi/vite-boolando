@@ -1,13 +1,11 @@
 <script>
-import mainMenu from '../data/mainMenu';
-import secondMenu from '../data/secondMenu';
-
+import Menus from '../data/Menus';
 export default {
-  data() {
-    return {
-      mainMenu,
-      secondMenu
-    };
+  data(){
+    return{
+      mainMenu: Menus.mainMenu,
+      secondMenu: Menus.secondMenu,
+    }
   }
 }
 </script>

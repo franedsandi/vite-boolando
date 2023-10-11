@@ -1,11 +1,10 @@
 <script>
-import social from '../data/social';
-import legal from '../data/legal';
+import Menus from '../data/Menus';
 export default {
   data(){
     return{
-      legal,
-      social,
+      legal: Menus.legal,
+      social: Menus.social,
     }
   }
 }
