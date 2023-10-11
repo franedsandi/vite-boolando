@@ -68,8 +68,8 @@ export default {
   ],
   cards:[
     {
-      primaryImage: '1.webp',
-      secondaryImage: '1b.webp',
+      primaryImage: 'img/1.webp',
+      secondaryImage: 'img/1b.webp',
       discount: '-50%',
       sostenibilita: true,
       marca: "Levi's",
@@ -78,8 +78,8 @@ export default {
       lastPrice: 14.99
     },
     {
-      primaryImage: '2.webp',
-      secondaryImage: '2b.webp',
+      primaryImage: 'img/2.webp',
+      secondaryImage: 'img/2b.webp',
       discount: '-30%',
       sostenibilita: false,
       marca: "Guess",
@@ -88,8 +88,8 @@ export default {
       lastPrice: 20.99
     },
     {
-      primaryImage: '3.webp',
-      secondaryImage: '3b.webp',
+      primaryImage: 'img/3.webp',
+      secondaryImage: '/img/3b.webp',
       discount: '-30%',
       sostenibilita: false,
       marca: "Come Zucchero Filato",
@@ -98,8 +98,8 @@ export default {
       lastPrice: 129.99
     },
     {
-      primaryImage: '4.webp',
-      secondaryImage: '4b.webp',
+      primaryImage: 'img/4.webp',
+      secondaryImage: 'img/4b.webp',
       discount: '-50%',
       sostenibilita: true,
       marca: "Levi's",
@@ -108,24 +108,24 @@ export default {
       lastPrice: 29.99
     },
     {
-      primaryImage: '5.webp',
-      secondaryImage: '5b.webp',
+      primaryImage: 'img/5.webp',
+      secondaryImage: 'img/5b.webp',
       discount: '-50%',
       sostenibilita: true,
       marca: "Maya Deluxe",
       modello: 'STRIPE BODICE',
-      fullPrice: null,
-      lastPrice: 99.99
+      fullPrice: 29.99,
+      lastPrice: 14.99
     },
     {
-      primaryImage: '6.webp',
-      secondaryImage: '6b.webp',
+      primaryImage: 'img/6.webp',
+      secondaryImage: 'img/6b.webp',
       discount: null,
       sostenibilita: false,
       marca: "Esprit",
       modello: 'MAGLIONE - BLACK',
-      fullPrice: null,
-      lastPrice: 29.99,
+      fullPrice: 29.99,
+      lastPrice: null,
     },
   ]
 };

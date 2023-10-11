@@ -1,6 +1,12 @@
 <script>
-export default {
+import Menus from '../data/Menus';
 
+export default {
+  data() {
+    return {
+      cards: Menus.cards,
+    };
+  }
 }
 </script>
 
@@ -8,24 +14,24 @@ export default {
   <div class="mid">
     <div class="container">
       <div class="content">
-        <div class="card">
-          <div class="image p-relative">
-            <img src="../assets/img/1.webp" alt="articulo 1">
-            <img src="../assets/img/1b.webp" alt="articulo 1b" class="upper p-absolute">
+        <div v-for="(item, index) in cards" :key="index" class="card">
+          <div class="image">
+            <img :src="item.primaryImage" alt="articulo">
+            <img :src="item.secondaryImage" alt="articulo b" class="upper p-absolute">
             <div class="like p-absolute">
               <span class="heart" >&hearts;</span>
             </div>
             <div class="caracteristicas p-absolute">
-              <span class="sconto">50%</span>
-              <span class="sostenibile">Sostenibilità</span>
+              <span v-if="item.discount !== null" class="sconto">{{ item.discount }}</span>
+              <span class="sostenibile" v-if="item.sostenibilita">Sostenibilità</span>
             </div>
           </div>
             <div class="description">
-              <span class="tag brand">levi's</span>
-              <span class="tag name">relazed fit tee unisex</span>
+              <span class="tag brand">{{ item.marca }}</span>
+              <span class="tag name">{{ item.modello }}</span>
               <span class="tag price">
-              <span class="red">14.99 &euro;</span>
-              <de>29.99&euro;</de>
+              <span v-if="item.lastPrice !== null" class="red">{{ item.lastPrice }} &euro;</span>
+              <span class="fullprice">{{item.fullPrice}}&euro;</span>
             </span>
           </div>
         </div>
