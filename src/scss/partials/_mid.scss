@@ -1,6 +1,8 @@
 
 .mid{
-  padding-top: 70px;
+  padding-top: 50px;
+  height: calc(100vh - 50px - 50px);
+  overflow-x: auto;
   .container{
     width: 90%;
     max-width: 1200px;

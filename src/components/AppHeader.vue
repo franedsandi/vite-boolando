@@ -23,7 +23,7 @@ export default {
       </li>
     </ul>
     <div class="logo">
-      <img src="../assets/img/boolean-logo.png" alt="">
+      <img src="img/boolean-logo.png" alt="">
     </div>
     <div class="fontawesome">
       <ul>
