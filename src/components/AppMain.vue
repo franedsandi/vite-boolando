@@ -1,14 +1,14 @@
 <script>
-import Menus from '../data/Menus';
-import Card from './Card.vue'; 
+import products from '../data/products';
+import productCard from './ProductCard.vue'; 
 
 export default {
   components: {
-    Card, 
+    productCard, 
   },
   data() {
     return {
-      cards: Menus.cards,
+      cards: products.cards,
     };
   }
 }
@@ -18,17 +18,10 @@ export default {
   <div class="mid">
     <div class="container">
       <div class="content">
-        <Card
-          v-for="(item, index) in cards"
+        <productCard
+          v-for="(product, index) in cards"
           :key="index"
-          :primaryImage="item.primaryImage"
-          :secondaryImage="item.secondaryImage"
-          :discount="item.discount"
-          :sostenibilita="item.sostenibilita"
-          :marca="item.marca"
-          :modello="item.modello"
-          :lastPrice="item.lastPrice"
-          :fullPrice="item.fullPrice"
+          :productObj="product"
         />
       </div>
     </div>

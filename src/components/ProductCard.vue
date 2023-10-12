@@ -1,14 +1,8 @@
 <script>
 export default {
+  name: 'productCard',
   props: {
-    primaryImage: String,
-    secondaryImage: String,
-    discount: String,
-    sostenibilita: Boolean,
-    marca: String,
-    modello: String,
-    lastPrice: Number,
-    fullPrice: Number,
+    productObj: Object
   },
 };
 </script>
@@ -17,39 +11,39 @@ export default {
   <div class="card">
     <div class="image">
       <img 
-      :src="primaryImage" 
+      :src="productObj.primaryImage" 
       alt="articulo">
       <img 
-      :src="secondaryImage" 
+      :src="productObj.secondaryImage" 
       alt="articulo b" class="upper">
       <div class="like">
         <span class="heart" >&hearts;</span>
       </div>
       <div class="caracteristicas">
         <span 
-        v-if="discount !== null" 
+        v-if="productObj.discount !== null" 
         class="sconto">
-        {{ discount }}
+        {{ productObj.discount }}
       </span>
         <span 
         class="sostenibile" 
-        v-if="sostenibilita">
+        v-if="productObj.sostenibilita">
         Sostenibilità
       </span>
       </div>
     </div>
     <div class="description">
-      <span class="tag brand">{{ marca }}</span>
-      <span class="tag name">{{ modello }}</span>
+      <span class="tag brand">{{ productObj.marca }}</span>
+      <span class="tag name">{{ productObj.modello }}</span>
       <span class="tag price">
         <span 
-        v-if="lastPrice !== null" 
+        v-if="productObj.lastPrice !== null" 
         class="red">
-        {{ lastPrice }} &euro;
+        {{ productObj.lastPrice }} &euro;
       </span>
         <span 
         class="fullprice">
-        {{ fullPrice }}&euro;
+        {{ productObj.fullPrice }}&euro;
       </span>
       </span>
     </div>
